@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Product Manager</h1>
+
+    <!-- Button to open the modal for adding a new product -->
+    <button onclick="openModal()" class="open-modal-btn">Add New Product</button>
+
+    <!-- Product list section -->
+    <div class="product-list">
+      <h2>Product List</h2>
+      <div id="product-list" class="product-list-grid"></div>
+    </div>
+  </div>
+
+  <!-- Modal for adding a new product -->
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeModal()">&times;</span>
+      <h2>Add New Product</h2>
+      <input type="text" id="name" placeholder="Product Name" required>
+      <textarea id="description" placeholder="Product Description" required></textarea>
+      <input type="number" id="price" placeholder="Price" required>
+      <input type="text" id="productId" placeholder="Product ID" required>
+      <input type="file" id="image"> <!-- File input for image upload -->
+      <button onclick="addProduct()">Add Product</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
