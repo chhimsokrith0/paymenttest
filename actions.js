@@ -18,13 +18,13 @@ const createPayment = async (product) => {
       tax: 0,
       currency: "KHR",
       discount: { type: "PERCENTAGE", value: 0 },
-      redirectUrl: "http://localhost:3000/",
+      redirectUrl: "https://paymenttest-jhen.onrender.com",
       items: [
         {
           quantity: 1,
           price: product.price,
           productId: product.productId,
-          img: product.image ? `http://localhost:3000${product.image}` : 'https://via.placeholder.com/150',
+          img: product.image ? `https://paymenttest-jhen.onrender.com${product.image}` : 'https://via.placeholder.com/150',
           name: product.name,
         },
       ],
