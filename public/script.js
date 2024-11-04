@@ -10,7 +10,7 @@ function closeModal() {
 
 // Fetch and display products as cards
 async function fetchProducts() {
-  const response = await fetch('http://localhost:3000/api/products');
+  const response = await fetch('https://paymenttest-jhen.onrender.com/api/products');
   const products = await response.json();
   const productList = document.getElementById('product-list');
 
@@ -60,7 +60,7 @@ async function addProduct() {
     formData.append('image', image); // Add image to FormData
   }
 
-  const response = await fetch('http://localhost:3000/api/products', {
+  const response = await fetch('https://paymenttest-jhen.onrender.com/api/products', {
     method: 'POST',
     body: formData,
   });
@@ -77,7 +77,7 @@ async function addProduct() {
 // Function to handle payment for a product
 async function payForProduct(productId) {
   try {
-    const response = await fetch('http://localhost:3000/api/products/pay', {
+    const response = await fetch('https://paymenttest-jhen.onrender.com/api/products/pay', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
